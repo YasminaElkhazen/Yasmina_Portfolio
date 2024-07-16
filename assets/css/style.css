@@ -2094,11 +2094,12 @@ $animationSpeed: 40s;
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-200px * 7))}
+	100% { transform: translateX(calc(-250px * 8))}
 }
 
 
-@keyframes slide {
+/* Animation for sliding left */
+@keyframes slide-left {
     from {
       transform: translateX(0);
     }
@@ -2107,16 +2108,27 @@ $animationSpeed: 40s;
     }
   }
   
+  /* Animation for sliding right */
+  @keyframes slide-right {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Container for logos sliding left */
   .logos {
     overflow: hidden;
-    padding-top: 5  0px;
+    padding-top: 5px;
     padding-bottom: 50px;
     background: black;
     white-space: nowrap;
     position: relative;
     margin-left: 350px;
     margin-right: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 10px;
   }
   
   .logos:before,
@@ -2145,11 +2157,58 @@ $animationSpeed: 40s;
   
   .logos-slide {
     display: inline-block;
-    animation: 20s slide infinite linear;
+    animation: 10s slide-left infinite linear;
   }
   
   .logos-slide img {
     height: 50px;
+    margin: 0 20px;
+  }
+  
+  /* Container for a single logo sliding right */
+  .logo {
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 60px;
+    background: black;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 350px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .logo:before,
+  .logo:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logo:before {
+    left: -200%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+  }
+  
+  .logo:after {
+    right: -200%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+  }
+  
+  .logo:hover .logo-slide {
+    animation-play-state: paused;
+  }
+  
+  .logo-slide {
+    display: inline-block;
+    animation: 40s slide-right infinite linear;
+  }
+  
+  .logo-slide img {
+    height: 60px;
     margin: 0 20px;
   }
   
