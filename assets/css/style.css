@@ -31,7 +31,7 @@
 
 */
 :root {
-    --primary_color: #28e98c;
+    --primary_color: #ff99cc;
 }
 *,*::before,*::after {
     margin: 0;
@@ -496,7 +496,7 @@ main.drake-main {
     height: 30px;
     border-radius: 50%;
     position: relative;
-    background: #28e98c;
+    background: #ff99cc;
 }
 .global-color .global-color-option .color-boxed a::before {
     content: '';
@@ -549,7 +549,7 @@ main.drake-main {
     background: #f31313;
 }
 .global-color .global-color-option .color-boxed a:nth-child(8) {
-    background: #ff99cc;
+    background: #28e98c;
 }
 .global-color .global-color-option .color-boxed a:nth-child(9) {
     background: #cceb00;

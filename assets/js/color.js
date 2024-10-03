@@ -1,7 +1,7 @@
 
 
 function color1() {
-    document.documentElement.style.setProperty('--primary_color', '#28e98c');
+    document.documentElement.style.setProperty('--primary_color', '#ff99cc');
 }
 function color2() {
     document.documentElement.style.setProperty('--primary_color', '#e4af12');
@@ -22,5 +22,5 @@ function color7() {
     document.documentElement.style.setProperty('--primary_color', '#f31313');
 }
 function color8() {
-    document.documentElement.style.setProperty('--primary_color', '#ff99cc');
+    document.documentElement.style.setProperty('--primary_color', '#28e98c');
 }
